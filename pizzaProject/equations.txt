@@ -1,0 +1,50 @@
+<script>
+    var total = 0.0;
+    var crust = document.getElementsByName"pizzaSize";
+    var meat = 0.0;
+    var crustType = document.getElementsByName"crustType";
+    var sauce = document.getElementsByName"sauce";
+    var veggies = 0.0;
+
+
+
+function pizzaPrice()
+{
+    total += crust;
+    total += meats();
+    total += crustType;
+    total += sauce;
+    total += veggies();
+}  
+
+function meats()
+{
+    while (numMeats > 1)
+    {
+        meat += 1;
+        numMeats --;
+        return meat;
+    }
+    if (numMeats == 0 || numMeats == 1)
+    {
+        meat = 0.0;
+        return meat;
+    }
+}
+
+function veggies()
+{
+    while (numVeg > 1)
+    {
+        veggies += 1;
+        numVeg --;
+        return veggies;
+    }
+    if (numVeg== 0 || numVeg == 1)
+    {
+        veggies = 0.0;
+        return veggies;
+    }
+
+}
+</script>

@@ -1,102 +1,68 @@
 <!DOCTYPE html>
 <html>
-    <header>
+    <head>
     <title>PRICE OF DA PIZZA</title>
     <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8">
 		<meta content="width=device-width,initial-scale=1.0" name="viewport">
-    <style src="./css/style.css"></style>
-    </header>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    </head>
     <!--GO FOR FORM SUBMISSION-->
     <!-- MORE CLASSES TO MODIFY BIG GROUPS BY CALLING CLASSES-->
     <body>
-        <div class="container">
-            <form>
-                <h1 class="headers">Pizza Size</h1>
-                <div class="input-group">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-4">
+                    <h2 class="headers">Pizza Size</h2>
                     <input class="size" type="radio" name="pizzaSize" value="Personal"> Personal<br>
                     <input class="size" type="radio" name="pizzaSize" value="Medium"> Medium<br>
                     <input class="size" type="radio" name="pizzaSize" value="Large" checked> Large<br>  
                     <input class="size" type="radio" name="pizzaSize" value="Extra Large"> Extra Large<br>
                 </div>
-
-                <h2 class="headers">Meat!</h2>
-                <div class="input-group mb-3">
-                    <div class="input-group-prepend">
-                        <div class="input-group-text">
-                            <input class="meat" type="checkbox" aria-label="Checkbox for following text input" name="Meat" value="Pepperoni">Pepperoni<br>
-                        </div>
-                        <div class="input-group-text">
-                            <input class="meat" type="checkbox" aria-label="Checkbox for following text input" name="Meat" value="Sausage">Sausage<br>
-                        </div>
-                        <div class="input-group-text">
-                            <input class="meat" type="checkbox" aria-label="Checkbox for following text input" name="Meat" value="Canadian">Canadian Bacon<br>
-                        </div>
-                        <div class="input-group-text">
-                            <input class="meat" type="checkbox" aria-label="Checkbox for following text input" name="Meat" value="Beef">Ground Beef<br>
-                        </div>
-                        <div class="input-group-text">
-                            <input class="meat" type="checkbox" aria-label="Checkbox for following text input" name="Meat" value="Anchovy">Anchovy<br>
-                        </div>
-                        <div class="input-group-text">
-                            <input class="meat" type="checkbox" aria-label="Checkbox for following text input" name="Meat" value="Chicken">Chicken<br>
-                        </div>
-                    </div>
+                <div class="col-4">
+                    <h2 class="headers">Meat!</h2>
+                    <input class="meat" type="checkbox" name="Meat" value="Pepperoni">Pepperoni<br>
+                    <input class="meat" type="checkbox" name="Meat" value="Sausage">Sausage<br>
+                    <input class="meat" type="checkbox" name="Meat" value="Canadian">Canadian Bacon<br>
+                    <input class="meat" type="checkbox" name="Meat" value="Beef">Ground Beef<br>
+                    <input class="meat" type="checkbox" name="Meat" value="Anchovy">Anchovy<br>
+                    <input class="meat" type="checkbox" name="Meat" value="Chicken">Chicken<br>
                 </div>
-
-                <h2 class="headers">Do you Like Cheese?</h1>
-                <div class="input-group">
+                <div class="col-4">
+                    <h2 class="headers">Do you Like Cheese?</h1>
                     <input class="cheese" type="radio" name="Cheese" value="Normal" checked> Sure<br>
                     <input class="cheese" type="radio" name="Cheese" value="None"> ...No...<br>
                     <input class="cheese" type="radio" name="Cheese" value="Extra"> BRING IT ON!!!<br>  
                 </div>
-
-                <h2 class="headers">You like bread right?</h1>
-                <div class="input-group">
+            </div>
+            <div class="row">
+                <div class="col-4">
+                    <h2 class="headers">You like bread right?</h1>
                     <input class="crust" type="radio" name="crust" value="Plain" checked> Plain Crust<br>
                     <input class="crust" type="radio" name="crust" value="Garlic"> Garlic Butter Crust<br>
                     <input class="crust" type="radio" name="crust" value="Stuffed"> Cheese Stuffed Crust<br>  
                     <input class="crust" type="radio" name="crust" value="Spicy"> Spicy Crust<br>
-                    <input class="crust" type="radio" name="crust" value="House"> House Special Crust<br> 
+                    <input class="crust" type="radio" name="crust" value="House"> House Special Crust<br>
                 </div>
-
-                <h2 class="headers">How bout that sauce?</h2>
-                <div class="input-group">
+                <div class="col-4">
+                    <h2 class="headers">How bout that sauce?</h2>
                     <input class="sauce" type="radio" name="Sauce"  value="Marinara" checked> Marinara Sauce<br>
                     <input class="sauce" type="radio" name="Sauce"  value="White"> White Sauce<br>
                     <input class="sauce" type="radio" name="Sauce"  value="Barbeque"> Barbeque Sauce<br>  
                     <input class="sauce" type="radio" name="Sauce"  value="None"> No Sauce<br> <!-- WE WILL COMPLIMENTARY REMOVE ALL THE SAUCE... BECAUSE THAT MAKES SENSE... -->
                 </div>
-
-                <h2 class="headers">Miscelaneous Toppings</h2>
-                <div class="input-group mb-3">
-                    <div class="input-group-prepend">
-                        <div class="input-group-text">
-                            <input class="veggies" type="checkbox" aria-label="Checkbox for following text input" name="Veggies" value="Tomatoes">Tomatoes<br>
-                        </div>
-                        <div class="input-group-text">
-                            <input class="veggies" type="checkbox" aria-label="Checkbox for following text input" name="Veggies" value="Onions">Onions<br>
-                        </div>
-                        <div class="input-group-text">
-                            <input class="veggies" type="checkbox" aria-label="Checkbox for following text input" name="Veggies" value="Olives">Olives<br>
-                        </div>
-                        <div class="input-group-text">
-                            <input class="veggies" type="checkbox" aria-label="Checkbox for following text input" name="Veggies" value="Green Peppers">Green Peppers<br>
-                        </div>
-                        <div class="input-group-text">
-                            <input class="veggies" type="checkbox" aria-label="Checkbox for following text input" name="Veggies" value="Mushrooms">Mushrooms<br>
-                        </div>
-                        <div class="input-group-text">
-                            <input class="veggies" type="checkbox" aria-label="Checkbox for following text input" name="Veggies" value="Pineapple">Pineapple<br>
-                        </div>
-                        <div class="input-group-text">
-                            <input class="veggies" type="checkbox" aria-label="Checkbox for following text input" name="Veggies" value="Spinach">Spinach<br>
-                        </div>
-                        <div class="input-group-text">
-                            <input class="veggies" type="checkbox" aria-label="Checkbox for following text input" name="Veggies" value="Jalapenos">Jalapenos<br>
-                        </div>
-                    </div>
+                <div class="col-4">
+                    <h2 class="headers">Miscelaneous Toppings</h2>
+                    <input class="veggies" type="checkbox" name="Veggies" value="Tomatoes">Tomatoes<br>
+                    <input class="veggies" type="checkbox" name="Veggies" value="Onions">Onions<br>
+                    <input class="veggies" type="checkbox" name="Veggies" value="Olives">Olives<br>
+                    <input class="veggies" type="checkbox" name="Veggies" value="Green Peppers">Green Peppers<br>
+                    <input class="veggies" type="checkbox" name="Veggies" value="Mushrooms">Mushrooms<br>
+                    <input class="veggies" type="checkbox" name="Veggies" value="Pineapple">Pineapple<br>
+                    <input class="veggies" type="checkbox" name="Veggies" value="Spinach">Spinach<br>
+                    <input class="veggies" type="checkbox" name="Veggies" value="Jalapenos">Jalapenos<br>
                 </div>
-            </form>
+            </div>
         </div>    
         <button type="button" onclick="pizzaPrice();">Submit your order for total!</button>
         <button type="button" onclick="reset();">Clear order.</button>
@@ -105,253 +71,213 @@
 
 
 
-        <script>
-                // var total;
-                // var size = document.getElementsByName("input[name='pizzaSize']:checked");
-                // var meat;
-                // var numMeats;
-                // var crustType = document.getElementsByName("input[name='crustType']:checked");
-                // var sauce = document.getElementsByName("input[name='sauce']:checked");
-                // var veggies;
-                // var numVeg;
-            
-            function pizzaPrice()
+    <script>
+        
+        function pizzaPrice()
+        {
+            var text1 = "<h3>You Ordered:</h3>"; //Selected Items
+            var runningTotal = 0; //Stores total cost
+            var sizeTotal = 0; //stores cost for size of pizza
+            var sizeArray = document.getElementsByClassName("size");  //Creates an array of all elements with class name size
+
+            for (var i=0; i < sizeArray.length; i++) //initialize the array
             {
-                var text1 = "<h3>You Ordered:</h3>"; //Selected Items
-                var runningTotal = 0; //Stores total cost
-                var sizeTotal = 0; //stores cost for size of pizza
-                var sizeArray = document.getElementsByClassName("size");  //Creates an array of all elements with class name size
-
-                for (var i=0; i < sizeArray.length; i++) //initialize the array
+                if (sizeArray[i].checked) //checks to see which value within the array is selected
                 {
-                    if (sizeArray[i].checked) //checks to see which value within the array is selected
-                    {
-                        var selectedSize = sizeArray[i].value; //creates and sets a variable to store that information
-                        text1 = text1 + selectedSize + "<br>"; // concatonates the selectedsize string to the text1 variable
-                    }
+                    var selectedSize = sizeArray[i].value; //creates and sets a variable to store that information
+                    text1 = text1 + selectedSize + "<br>"; // concatonates the selectedsize string to the text1 variable
                 }
-                if (selectedSize === "Personal") //These all check for equivalency of values searching for exact match of text and then sets the sizeTotal to the value that corresponds to selectedSize
-                {
-                    sizeTotal = 6;
-                } 
-                else if (selectedSize === "Medium") 
-                {
-                    sizeTotal = 10;
-                } 
-                else if (selectedSize === "Large") 
-                {
-                    sizeTotal = 14;
-                } 
-                else if (selectedSize === "Extra Large") 
-                {
-                    sizeTotal = 16;
-                }
-                runningTotal = sizeTotal;
-
-                getMeat(runningTotal, text1); //calls upon function getMeat and passes two variables to it
-
-            }  
-            
-            function getMeat(runningTotal, text1)
+            }
+            if (selectedSize === "Personal") //These all check for equivalency of values searching for exact match of text and then sets the sizeTotal to the value that corresponds to selectedSize
             {
-                var meatTotal = 0; // initialize total number of meats variable
-                var selectedMeat = []; //initialize an array for selected meats
-                var meatArray = document.getElementsByClassName("meat"); //populate and array of all possible items with class name meat
+                sizeTotal = 6;
+            } 
+            else if (selectedSize === "Medium") 
+            {
+                sizeTotal = 10;
+            } 
+            else if (selectedSize === "Large") 
+            {
+                sizeTotal = 14;
+            } 
+            else if (selectedSize === "Extra Large") 
+            {
+                sizeTotal = 16;
+            }
+            runningTotal = sizeTotal;
 
-                for (j = 0; j < meatArray.length; j++) //checks each value in the meatArray
-                {
-                    if (meatArray[j].checked) //checks to see if values are checked
-                    {
-                        selectedMeat.push(meatArray[j].value); //pushes the value at position j to the selectedMeat array
-                        console.log("selected meat item: ("+meatArray[j].value+")");
-                        text1 = text1 + meatArray[j].value + "<br>"; //concatanates the chars of meatArray onto text1
-                    }
-                }
-                var meatCount = selectedMeat.length;
-                if (meatCount > 1)
-                {
-                    meatTotal = (meatCount - 1);
-                }
-                else
-                {
-                    meatTotal = 0;
-                }
-                runningTotal = runningTotal + meatTotal;
+            getMeat(runningTotal, text1); //calls upon function getMeat and passes two variables to it
 
-                getVeggies(runningTotal, text1);
+        }  
+        
+        function getMeat(runningTotal, text1)
+        {
+            var meatTotal = 0; // initialize total number of meats variable
+            var selectedMeat = []; //initialize an array for selected meats
+            var meatArray = document.getElementsByClassName("meat"); //populate and array of all possible items with class name meat
+
+            for (j = 0; j < meatArray.length; j++) //checks each value in the meatArray
+            {
+                if (meatArray[j].checked) //checks to see if values are checked
+                {
+                    selectedMeat.push(meatArray[j].value); //pushes the value at position j to the selectedMeat array
+                    console.log("selected meat item: ("+meatArray[j].value+")");
+                    text1 = text1 + meatArray[j].value + "<br>"; //concatanates the chars of meatArray onto text1
+                }
+            }
+            var meatCount = selectedMeat.length;
+            if (meatCount > 1)
+            {
+                meatTotal = (meatCount - 1);
+            }
+            else
+            {
+                meatTotal = 0;
+            }
+            runningTotal = runningTotal + meatTotal;
+
+            getVeggies(runningTotal, text1);
+        }
+
+        function getVeggies(runningTotal, text1)
+        {
+            var veggieTotal = 0; // initialize total number of meats variable
+            var selectedVeggie = []; //initialize an array for selected meats
+            var veggieArray = document.getElementsByClassName("veggies"); //populate and array of all possible items with class name meat
+
+            for (k = 0; k < veggieArray.length; k++) //checks each value in the meatArray
+            {
+                if (veggieArray[k].checked) //checks to see if values are checked
+                {
+                    selectedVeggie.push(veggieArray[k].value); //pushes the value at position j to the selectedMeat array
+                    console.log("selected meat item: (" + veggieArray[k].value + ")");
+                    text1 = text1 + veggieArray[k].value + "<br>"; //concatanates the chars of meatArray onto text1
+                }
+            }
+            var veggieCount = selectedVeggie.length;
+            if (veggieCount > 1)
+            {
+                veggieTotal = (veggieCount - 1);
+            }
+            else
+            {
+                veggieTotal = 0;
+            }
+            runningTotal = runningTotal + veggieTotal;
+
+            getCrust(runningTotal, text1);
+        }
+
+        function getCrust(runningTotal, text1)
+        {
+            var crustTotal = 0;
+            var crustArray = document.getElementsByClassName("crust");  //Creates an array of all elements with class name size
+
+            for (var h=0; h < crustArray.length; h++) //initialize the array
+            {
+                if (crustArray[h].checked) //checks to see which value within the array is selected
+                {
+                    var selectedCrust = crustArray[h].value; //creates and sets a variable to store that information
+                    text1 = text1 + selectedCrust + "<br>"; // concatonates the selectedsize string to the text1 variable
+                }
+            }
+            if (selectedCrust === "Plain") //These all check for equivalency of values searching for exact match of text and then sets the sizeTotal to the value that corresponds to selectedSize
+            {
+                crustTotal = 0;
+            } 
+            else if (selectedCrust === "Garlic") 
+            {
+                crustTotal = 0;
+            } 
+            else if (selectedCrust === "Stuffed") 
+            {
+                crustTotal = 3;
+            } 
+            else if (selectedCrust === "Spicy") 
+            {
+                crustTotal = 0;
+            }
+            else if (selectedCrust === "House") 
+            {
+                crustTotal = 0;
             }
 
-            function getVeggies(runningTotal, text1)
+            runningTotal = runningTotal + crustTotal;
+
+            getCheese(runningTotal, text1);
+        }
+
+        function getCheese(runningTotal, text1)
+        {
+            var cheeseTotal = 0;
+            var cheeseArray = document.getElementsByClassName("cheese");  //Creates an array of all elements with class name size
+
+            for (var h=0; h < cheeseArray.length; h++) //initialize the array
             {
-                var veggieTotal = 0; // initialize total number of meats variable
-                var selectedVeggie = []; //initialize an array for selected meats
-                var veggieArray = document.getElementsByClassName("veggies"); //populate and array of all possible items with class name meat
+                if (cheeseArray[h].checked) //checks to see which value within the array is selected
+                {
+                    var selectedCheese = cheeseArray[h].value; //creates and sets a variable to store that information
+                    text1 = text1 + selectedCheese + "<br>"; // concatonates the selectedsize string to the text1 variable
+                }
+            }
+            if (selectedCheese === "Regular") //These all check for equivalency of values searching for exact match of text and then sets the sizeTotal to the value that corresponds to selectedSize
+            {
+                cheeseTotal = 0;
+            } 
+            else if (selectedCheese === "None") 
+            {
+                cheeseTotal = 0;
+            } 
+            else if (selectedCheese === "Extra") 
+            {
+                cheeseTotal = 3;
+            } 
 
-                for (k = 0; k < veggieArray.length; k++) //checks each value in the meatArray
-                {
-                    if (veggieArray[k].checked) //checks to see if values are checked
-                    {
-                        selectedVeggie.push(veggieArray[k].value); //pushes the value at position j to the selectedMeat array
-                        console.log("selected meat item: (" + veggieArray[k].value + ")");
-                        text1 = text1 + veggieArray[k].value + "<br>"; //concatanates the chars of meatArray onto text1
-                    }
-                }
-                var veggieCount = selectedVeggie.length;
-                if (veggieCount > 1)
-                {
-                    veggieTotal = (veggieCount - 1);
-                }
-                else
-                {
-                    veggieTotal = 0;
-                }
-                runningTotal = runningTotal + veggieTotal;
+            runningTotal = runningTotal + cheeseTotal;
+            getSauce(runningTotal, text1);
+        }
 
-                getCrust(runningTotal, text1);
+        function getSauce(runningTotal, text1)
+        {
+            var sauceTotal = 0;
+            var sauceArray = document.getElementsByClassName("sauce");  //Creates an array of all elements with class name size
+
+            for (var h=0; h < sauceArray.length; h++) //initialize the array
+            {
+                if (sauceArray[h].checked) //checks to see which value within the array is selected
+                {
+                    var selectedSauce = sauceArray[h].value; //creates and sets a variable to store that information
+                    text1 = text1 + selectedSauce + "<br>"; // concatonates the selectedsize string to the text1 variable
+                }
+            }
+            if (selectedSauce === "Marinara") //These all check for equivalency of values searching for exact match of text and then sets the sizeTotal to the value that corresponds to selectedSize
+            {
+                sauceTotal = 0;
+            } 
+            else if (selectedSauce === "White") 
+            {
+                sauceTotal = 0;
+            } 
+            else if (selectedSauce === "Barbeque") 
+            {
+                sauceTotal = 0;
+            } 
+            else if (selectedSauce === "None") 
+            {
+                sauceTotal = 0;
             }
 
-            function getCrust(runningTotal, text1)
-            {
-                var crustTotal = 0;
-                var crustArray = document.getElementsByClassName("crust");  //Creates an array of all elements with class name size
+            runningTotal = runningTotal + sauceTotal;
 
-                for (var h=0; h < crustArray.length; h++) //initialize the array
-                {
-                    if (crustArray[h].checked) //checks to see which value within the array is selected
-                    {
-                        var selectedCrust = crustArray[h].value; //creates and sets a variable to store that information
-                        text1 = text1 + selectedCrust + "<br>"; // concatonates the selectedsize string to the text1 variable
-                    }
-                }
-                if (selectedCrust === "Plain") //These all check for equivalency of values searching for exact match of text and then sets the sizeTotal to the value that corresponds to selectedSize
-                {
-                    crustTotal = 0;
-                } 
-                else if (selectedCrust === "Garlic") 
-                {
-                    crustTotal = 0;
-                } 
-                else if (selectedCrust === "Stuffed") 
-                {
-                    crustTotal = 3;
-                } 
-                else if (selectedCrust === "Spicy") 
-                {
-                    crustTotal = 0;
-                }
-                else if (selectedCrust === "House") 
-                {
-                    crustTotal = 0;
-                }
+            document.getElementById("showText").innetrHTML = text1; 
+            document.getElementById("totalPrice").innerHTML = "<h3>Total: <strong>$" + runningTotal + ".00" + "</strong></h3>";
+        }
 
-                runningTotal = runningTotal + crustTotal;
-
-                getCheese(runningTotal, text1);
-            }
-
-            function getCheese(runningTotal, text1)
-            {
-                var cheeseTotal = 0;
-                var cheeseArray = document.getElementsByClassName("cheese");  //Creates an array of all elements with class name size
-
-                for (var h=0; h < cheeseArray.length; h++) //initialize the array
-                {
-                    if (cheeseArray[h].checked) //checks to see which value within the array is selected
-                    {
-                        var selectedCheese = cheeseArray[h].value; //creates and sets a variable to store that information
-                        text1 = text1 + selectedCheese + "<br>"; // concatonates the selectedsize string to the text1 variable
-                    }
-                }
-                if (selectedCheese === "Regular") //These all check for equivalency of values searching for exact match of text and then sets the sizeTotal to the value that corresponds to selectedSize
-                {
-                    cheeseTotal = 0;
-                } 
-                else if (selectedCheese === "None") 
-                {
-                    cheeseTotal = 0;
-                } 
-                else if (selectedCheese === "Extra") 
-                {
-                    cheeseTotal = 3;
-                } 
-
-                runningTotal = runningTotal + cheeseTotal;
-                getSauce(runningTotal, text1);
-            }
-
-            function getSauce(runningTotal, text1)
-            {
-                var sauceTotal = 0;
-                var sauceArray = document.getElementsByClassName("sauce");  //Creates an array of all elements with class name size
-
-                for (var h=0; h < sauceArray.length; h++) //initialize the array
-                {
-                    if (sauceArray[h].checked) //checks to see which value within the array is selected
-                    {
-                        var selectedSauce = sauceArray[h].value; //creates and sets a variable to store that information
-                        text1 = text1 + selectedSauce + "<br>"; // concatonates the selectedsize string to the text1 variable
-                    }
-                }
-                if (selectedSauce === "Marinara") //These all check for equivalency of values searching for exact match of text and then sets the sizeTotal to the value that corresponds to selectedSize
-                {
-                    sauceTotal = 0;
-                } 
-                else if (selectedSauce === "White") 
-                {
-                    sauceTotal = 0;
-                } 
-                else if (selectedSauce === "Barbeque") 
-                {
-                    sauceTotal = 0;
-                } 
-                else if (selectedSauce === "None") 
-                {
-                    sauceTotal = 0;
-                }
-
-                runningTotal = runningTotal + sauceTotal;
-
-                document.getElementById("showText").innetrHTML = text1; 
-                document.getElementById("totalPrice").innerHTML = "<h3>Total: <strong>$" + runningTotal + ".00" + "</strong></h3>";
-            }
-
-            
-            // function meats()
-            // {
-            //     while (numMeats > 1)
-            //     {
-            //         meat += 1;
-            //         numMeats --;
-            //         return meat;
-            //     }
-            //     if (numMeats == 0 || numMeats == 1)
-            //     {
-            //         meat = 0.0;
-            //         return meat;
-            //     }
-            // }
-            
-            // function veggies()
-            // {
-            //     while (numVeg > 1)
-            //     {
-            //         veggies += 1;
-            //         numVeg --;
-            //         return veggies;
-            //     }
-            //     if (numVeg== 0 || numVeg == 1)
-            //     {
-            //         veggies = 0.0;
-            //         return veggies;
-            //     }
-            
-            // }
-
-            function reset()
-            {
-                location.reload();
-            }
-            </script>
+        function reset()
+        {
+            location.reload();
+        }
+        </script>
 
     </body>
 

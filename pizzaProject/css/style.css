@@ -1,4 +1,58 @@
+/* <style>#menuBG{width:400px;height:470px;margin:10px auto;}
+		.left{width:200px;height:200px;float:left;}
+		.right{width:200px;height:200px;float:right;}
+		#cart{top:0;margin:0px auto;width:400px;height:200px;}#btnOrder{margin:10px 0px 0px 100px;width:100px;height:40px}
+</style>*/
 headers
 {
     font-family: 'Courier New', Courier, monospace;
+    width: 400px;
+    height: 200px;
+}
+
+container-fluid
+{
+    max-width: native;
+}
+
+.col-container-fluid
+{
+    max-width: 75px;
+}
+
+.row-container
+{
+    min-height: 500px;
+    row-gap: 15px;
+}
+
+input-group-prepend
+{
+    font-family: 'Courier New', Courier, monospace;
+}
+
+input-group
+{
+    font-family: 'Courier New', Courier, monospace;
+    display: float-ms-grid;
+    max-height: 75px;
+    max-width: 125px;
+}
+
+#showText
+{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    width:200px; 
+    height:190px; 
+    margin:0px auto; 
+    float:left;
+}
+
+#totalPrice
+{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    width:200px; 
+    height:190px; 
+    margin:0 auto; 
+    float:right;
 }

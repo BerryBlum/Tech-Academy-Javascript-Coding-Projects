@@ -5,21 +5,20 @@
     <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8">
 		<meta content="width=device-width,initial-scale=1.0" name="viewport">
     <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     </head>
     <!--GO FOR FORM SUBMISSION-->
     <!-- MORE CLASSES TO MODIFY BIG GROUPS BY CALLING CLASSES-->
     <body>
         <div class="container-fluid">
             <div class="row">
-                <div class="col-4">
+                <div class="col">
                     <h2 class="headers">Pizza Size</h2>
                     <input class="size" type="radio" name="pizzaSize" value="Personal"> Personal<br>
                     <input class="size" type="radio" name="pizzaSize" value="Medium"> Medium<br>
                     <input class="size" type="radio" name="pizzaSize" value="Large" checked> Large<br>  
                     <input class="size" type="radio" name="pizzaSize" value="Extra Large"> Extra Large<br>
                 </div>
-                <div class="col-4">
+                <div class="col">
                     <h2 class="headers">Meat!</h2>
                     <input class="meat" type="checkbox" name="Meat" value="Pepperoni">Pepperoni<br>
                     <input class="meat" type="checkbox" name="Meat" value="Sausage">Sausage<br>
@@ -28,7 +27,7 @@
                     <input class="meat" type="checkbox" name="Meat" value="Anchovy">Anchovy<br>
                     <input class="meat" type="checkbox" name="Meat" value="Chicken">Chicken<br>
                 </div>
-                <div class="col-4">
+                <div class="col">
                     <h2 class="headers">Do you Like Cheese?</h1>
                     <input class="cheese" type="radio" name="Cheese" value="Normal" checked> Sure<br>
                     <input class="cheese" type="radio" name="Cheese" value="None"> ...No...<br>
@@ -36,7 +35,7 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-4">
+                <div class="col">
                     <h2 class="headers">You like bread right?</h1>
                     <input class="crust" type="radio" name="crust" value="Plain" checked> Plain Crust<br>
                     <input class="crust" type="radio" name="crust" value="Garlic"> Garlic Butter Crust<br>
@@ -44,14 +43,14 @@
                     <input class="crust" type="radio" name="crust" value="Spicy"> Spicy Crust<br>
                     <input class="crust" type="radio" name="crust" value="House"> House Special Crust<br>
                 </div>
-                <div class="col-4">
+                <div class="col">
                     <h2 class="headers">How bout that sauce?</h2>
                     <input class="sauce" type="radio" name="Sauce"  value="Marinara" checked> Marinara Sauce<br>
                     <input class="sauce" type="radio" name="Sauce"  value="White"> White Sauce<br>
                     <input class="sauce" type="radio" name="Sauce"  value="Barbeque"> Barbeque Sauce<br>  
                     <input class="sauce" type="radio" name="Sauce"  value="None"> No Sauce<br> <!-- WE WILL COMPLIMENTARY REMOVE ALL THE SAUCE... BECAUSE THAT MAKES SENSE... -->
                 </div>
-                <div class="col-4">
+                <div class="col">
                     <h2 class="headers">Miscelaneous Toppings</h2>
                     <input class="veggies" type="checkbox" name="Veggies" value="Tomatoes">Tomatoes<br>
                     <input class="veggies" type="checkbox" name="Veggies" value="Onions">Onions<br>
@@ -63,13 +62,12 @@
                     <input class="veggies" type="checkbox" name="Veggies" value="Jalapenos">Jalapenos<br>
                 </div>
             </div>
-        </div>    
-        <button type="button" onclick="pizzaPrice();">Submit your order for total!</button>
-        <button type="button" onclick="reset();">Clear order.</button>
-        <h4 id="showText"></h4>
-        <h4 id="totalPrice">0.00</h4>
-
-
+        </div> 
+    </div>
+    <button class="btn" type="button" onclick="pizzaPrice();">Submit your order for total!</button>
+    <button class="btn" type="button" onclick="reset();">Clear order.</button><br>
+    <h4 class="receipt" id="showText"></h4>
+    <h4 class="receipt" id="totalPrice"></h4>
 
     <script>
         
@@ -269,7 +267,7 @@
 
             runningTotal = runningTotal + sauceTotal;
 
-            document.getElementById("showText").innetrHTML = text1; 
+            document.getElementById("showText").innerHTML = text1; 
             document.getElementById("totalPrice").innerHTML = "<h3>Total: <strong>$" + runningTotal + ".00" + "</strong></h3>";
         }
 
@@ -278,6 +276,8 @@
             location.reload();
         }
         </script>
+
+    <footer class="footer">Far from an artist I am</footer>
 
     </body>
 

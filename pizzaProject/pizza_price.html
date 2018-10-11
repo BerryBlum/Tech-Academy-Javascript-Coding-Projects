@@ -66,7 +66,8 @@
     </div>
     <button class="btn" type="button" onclick="pizzaPrice();">Submit your order for total!</button>
     <button class="btn" type="button" onclick="reset();">Clear order.</button><br>
-    <h4 class="receipt" id="showText"></h4>
+    <h4 class="receipt" id="showText0"></h4>
+        <h4 class="receipt" id="showText1"></h4><br>
     <h4 class="receipt" id="totalPrice"></h4>
 
     <script>
@@ -74,6 +75,7 @@
         function pizzaPrice()
         {
             var text1 = "<h3>You Ordered:</h3>"; //Selected Items
+            var text2 = "<h3>Cost per item:</h3>";
             var runningTotal = 0; //Stores total cost
             var sizeTotal = 0; //stores cost for size of pizza
             var sizeArray = document.getElementsByClassName("size");  //Creates an array of all elements with class name size
@@ -103,12 +105,13 @@
                 sizeTotal = 16;
             }
             runningTotal = sizeTotal;
+            text2 += sizeTotal.toString() + ".00" + "<br>";
 
-            getMeat(runningTotal, text1); //calls upon function getMeat and passes two variables to it
+            getMeat(runningTotal, text1, text2); //calls upon function getMeat and passes two variables to it
 
         }  
         
-        function getMeat(runningTotal, text1)
+        function getMeat(runningTotal, text1, text2)
         {
             var meatTotal = 0; // initialize total number of meats variable
             var selectedMeat = []; //initialize an array for selected meats
@@ -121,6 +124,14 @@
                     selectedMeat.push(meatArray[j].value); //pushes the value at position j to the selectedMeat array
                     console.log("selected meat item: ("+meatArray[j].value+")");
                     text1 = text1 + meatArray[j].value + "<br>"; //concatanates the chars of meatArray onto text1
+                    if (j > 0)
+                    {
+                        text2 += "1.00" + "<br>";
+                    }
+                    else
+                    {
+                        text2 += "0.00" + "<br>";
+                    }
                 }
             }
             var meatCount = selectedMeat.length;
@@ -134,10 +145,10 @@
             }
             runningTotal = runningTotal + meatTotal;
 
-            getVeggies(runningTotal, text1);
+            getVeggies(runningTotal, text1, text2);
         }
 
-        function getVeggies(runningTotal, text1)
+        function getVeggies(runningTotal, text1, text2)
         {
             var veggieTotal = 0; // initialize total number of meats variable
             var selectedVeggie = []; //initialize an array for selected meats
@@ -150,6 +161,14 @@
                     selectedVeggie.push(veggieArray[k].value); //pushes the value at position j to the selectedMeat array
                     console.log("selected meat item: (" + veggieArray[k].value + ")");
                     text1 = text1 + veggieArray[k].value + "<br>"; //concatanates the chars of meatArray onto text1
+                    if (k > 0)
+                    {
+                        text2 += "1.00" + "<br>";
+                    }
+                    else
+                    {
+                        text2 += "0.00" + "<br>";
+                    }
                 }
             }
             var veggieCount = selectedVeggie.length;
@@ -163,10 +182,10 @@
             }
             runningTotal = runningTotal + veggieTotal;
 
-            getCrust(runningTotal, text1);
+            getCrust(runningTotal, text1, text2);
         }
 
-        function getCrust(runningTotal, text1)
+        function getCrust(runningTotal, text1, text2)
         {
             var crustTotal = 0;
             var crustArray = document.getElementsByClassName("crust");  //Creates an array of all elements with class name size
@@ -201,11 +220,12 @@
             }
 
             runningTotal = runningTotal + crustTotal;
+            text2 += crustTotal.toString() + ".00" + "<br>";
 
-            getCheese(runningTotal, text1);
+            getCheese(runningTotal, text1, text2);
         }
 
-        function getCheese(runningTotal, text1)
+        function getCheese(runningTotal, text1, text2)
         {
             var cheeseTotal = 0;
             var cheeseArray = document.getElementsByClassName("cheese");  //Creates an array of all elements with class name size
@@ -230,12 +250,12 @@
             {
                 cheeseTotal = 3;
             } 
-
+            text2 += cheeseTotal.toString() + ".00" + "<br>";
             runningTotal = runningTotal + cheeseTotal;
-            getSauce(runningTotal, text1);
+            getSauce(runningTotal, text1, text2);
         }
 
-        function getSauce(runningTotal, text1)
+        function getSauce(runningTotal, text1, text2)
         {
             var sauceTotal = 0;
             var sauceArray = document.getElementsByClassName("sauce");  //Creates an array of all elements with class name size
@@ -266,9 +286,11 @@
             }
 
             runningTotal = runningTotal + sauceTotal;
+            text2 += sauceTotal.toString() + ".00" + "<br>";
 
-            document.getElementById("showText").innerHTML = text1; 
-            document.getElementById("totalPrice").innerHTML = "<h3>Total: <strong>$" + runningTotal + ".00" + "</strong></h3>";
+            document.getElementById("showText0").innerHTML = text1; 
+            document.getElementById("showText1").innerHTML = text2;
+            document.getElementById("totalPrice").innerHTML = "<h3>Total: $" + runningTotal + ".00" + "</h3>";
         }
 
         function reset()

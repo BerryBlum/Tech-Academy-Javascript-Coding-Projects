@@ -24,12 +24,19 @@
     column-count: 3;
 }
 
-#showText
+#showText0
 {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     max-width:200px; 
     margin: 0px;
     float:left;
+}
+#showText1
+{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    max-width:200px; 
+    margin: 0px 0px 0px 25px;
+    text-align: right;
 }
 
 #totalPrice
